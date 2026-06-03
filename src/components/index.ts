@@ -2,6 +2,7 @@
 // ! Don't remove anything from here
 
 import { About } from "./about";
+import { AchievementsShowcase } from "./achievements-showcase";
 import {
   BallCanvas,
   ComputersCanvas,
@@ -17,6 +18,7 @@ import { Works } from "./works";
 
 export {
   About,
+  AchievementsShowcase,
   BallCanvas,
   ComputersCanvas,
   Contact,

@@ -141,7 +141,53 @@ export const TECHNOLOGIES = [
 ] as const;
 
 // Hackathons & Certifications
-export const HACKATHONS_CERTIFICATIONS = [
+export const ALL_ACHIEVEMENTS = [
+  {
+    title: "CALIBRE 2K26 – National Level Project Poster Competition",
+    organization: "Fr. C. Rodrigues Institute of Technology (FCRIT), Vashi",
+    date: "17 April 2026",
+    description:
+      "Participated in the National Level Project Poster Competition at CALIBRE 2K26, where I presented a technical poster highlighting project concepts, implementation methodology, and innovative solutions while demonstrating research, presentation, and communication skills.",
+    status: "Participant",
+    certificate_link: "/certificates/frc.jpeg",
+    project_link: "",
+    icon_type: "hackathon",
+  },
+  {
+    title: "NeoFuture Hackathon 2026",
+    organization: "Shree L. R. Tiwari College of Engineering (SLRTCE)",
+    date: "10–11 April 2026",
+    project_name: "HireMind AI",
+    description:
+      "Participated in NeoFuture Hackathon 2026 and showcased HireMind AI, an AI-powered recruitment platform focused on intelligent resume screening, candidate evaluation, and data-driven hiring insights. The project highlighted the practical use of AI and Machine Learning in modern recruitment.",
+    status: "Participant",
+    certificate_link: "/certificates/tiwari.jpeg",
+    project_link: "",
+    icon_type: "hackathon",
+  },
+  {
+    title: "VORTEX 2025 – State Level Technical Exhibit Competition",
+    organization: "Indian Society for Technical Education (ISTE) Student Chapter MH-116, Thakur Shyamnarayan Engineering College (TSEC)",
+    date: "27–28 February 2025",
+    project_name: "Solar Tracking Using Intensity of Sunlight",
+    description:
+      "Participated in VORTEX 2025, a State-Level Technical Exhibit Competition, where I showcased Solar Tracking Using Intensity of Sunlight, an innovative project designed to maximize solar energy absorption through intelligent sunlight intensity detection and automated panel alignment. The project demonstrated practical applications of renewable energy, embedded systems, and engineering problem-solving.",
+    status: "Participant",
+    certificate_link: "/certificates/vortex.jpeg",
+    project_link: "",
+    icon_type: "hackathon",
+  },
+  {
+    title: "HackSpark 1.0 – State Level 24-Hour Hackathon",
+    organization: "Thakur Shyamnarayan Engineering College (TSEC)",
+    date: "15–16 March 2025",
+    description:
+      "Participated in HackSpark 1.0, a State-Level 24-Hour Hackathon organized by Thakur Shyamnarayan Engineering College. Collaborated with a team to design and develop an innovative technology solution within a limited timeframe, demonstrating problem-solving, teamwork, software development, and presentation skills while competing alongside students from various institutions.",
+    status: "Participant",
+    certificate_link: "/certificates/hackspark_certificate.jpeg",
+    project_link: "",
+    icon_type: "hackathon",
+  },
   {
     title: "State-Level 24-Hour Hackathon",
     organization: "State Technical Board",
@@ -165,14 +211,27 @@ export const HACKATHONS_CERTIFICATIONS = [
     icon_type: "certification",
   },
   {
-    title: "Smart India Hackathon",
-    organization: "Ministry of Education, Govt. of India",
-    date: "November 2024",
+    title: "Smart India Hackathon 2025 – Internal Hackathon",
+    organization: "Institution's Innovation Council (IIC), Thakur Shyamnarayan Engineering College (TSEC)",
+    date: "26 September 2025",
+    project_name: "College Management System",
     description:
-      "Selected as a finalist to compete in a prestigious national-level hackathon. Developed a digital prototype for a government problem statement addressing critical issues in resource management.",
-    status: "Finalist",
-    certificate_link: "",
-    project_link: "https://github.com/Bhavesh1411/PrismIQ",
+      "Developed and presented a College Management System designed to streamline academic and administrative processes, including student management, attendance tracking, faculty coordination, and centralized record management.",
+    status: "Participant",
+    certificate_link: "/certificates/sih.jpeg",
+    project_link: "",
+    icon_type: "hackathon",
+  },
+  {
+    title: "DevSprint 2026 – 5-Hour Mini Hackathon",
+    organization: "TSEC ACM Student Chapter & CodeCrafters",
+    date: "27 March 2026",
+    project_name: "FoodBridge",
+    description:
+      "Developed and presented FoodBridge, a platform aimed at reducing food wastage by connecting surplus food providers with NGOs and individuals in need through a streamlined donation and distribution process.",
+    status: "Participant",
+    certificate_link: "/certificates/devsprint.jpeg",
+    project_link: "",
     icon_type: "hackathon",
   },
   {
@@ -186,6 +245,13 @@ export const HACKATHONS_CERTIFICATIONS = [
     project_link: "https://github.com/Bhavesh1411/Autism-Spectrum-Disorder-Mini-Project",
     icon_type: "certification",
   },
+] as const;
+
+export const FEATURED_ACHIEVEMENTS = [
+  ALL_ACHIEVEMENTS[1],
+  ALL_ACHIEVEMENTS[6],
+  ALL_ACHIEVEMENTS[3],
+  ALL_ACHIEVEMENTS[2],
 ] as const;
 
 

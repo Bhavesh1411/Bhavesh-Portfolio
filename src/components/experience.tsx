@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
-import { HACKATHONS_CERTIFICATIONS } from "../constants";
+import { FEATURED_ACHIEVEMENTS } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { textVariant } from "../utils/motion";
@@ -21,7 +22,7 @@ const TrophyIcon = () => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="w-[60%] h-[60%] text-white"
+    className="w-[60%] h-[60%] text-white !m-0 !static"
   >
     <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
     <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
@@ -40,7 +41,7 @@ const CertificationIcon = () => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className="w-[60%] h-[60%] text-white"
+    className="w-[60%] h-[60%] text-white !m-0 !static"
   >
     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
     <circle cx="12" cy="11" r="3" />
@@ -64,7 +65,7 @@ const getStatusBadgeStyle = (status: string) => {
 };
 
 type TimelineCardProps = {
-  item: (typeof HACKATHONS_CERTIFICATIONS)[number];
+  item: (typeof FEATURED_ACHIEVEMENTS)[number];
 };
 
 // Timeline Card
@@ -105,7 +106,12 @@ const TimelineCard = ({ item }: TimelineCardProps) => {
         </div>
 
         {/* Short Description */}
-        <p className="text-white-100 text-[14px] mt-4 leading-relaxed font-light">
+        {(item as any).project_name && (
+          <p className="text-secondary text-[15px] font-bold mt-4">
+            Project: <span className="text-white">{(item as any).project_name}</span>
+          </p>
+        )}
+        <p className={`text-white-100 text-[14px] ${(item as any).project_name ? 'mt-2' : 'mt-4'} leading-relaxed font-light`}>
           {item.description}
         </p>
 
@@ -178,10 +184,28 @@ export const Experience = () => {
         {/* Timeline */}
         <div className="mt-20 flex flex-col">
           <VerticalTimeline>
-            {HACKATHONS_CERTIFICATIONS.map((item, i) => (
+            {FEATURED_ACHIEVEMENTS.map((item, i) => (
               <TimelineCard key={i} item={item} />
             ))}
           </VerticalTimeline>
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <Link
+            to="/achievements"
+            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary hover:bg-black-200 transition-all duration-300 border border-secondary/20 flex items-center gap-2"
+          >
+            View All Achievements
+            <svg
+              className="w-5 h-5 ml-1 text-white"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
         </div>
       </>
     </SectionWrapper>

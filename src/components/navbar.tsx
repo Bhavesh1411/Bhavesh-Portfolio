@@ -43,12 +43,30 @@ export const Navbar = ({ hide }: NavbarProps) => {
         {/* Logo */}
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="flex items-center gap-3 relative group"
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
         >
+          <div className="relative">
+            <img 
+              src="/profile.jpeg" 
+              alt="Bhavesh" 
+              className="w-11 h-11 rounded-full object-cover border-2 border-[#915eff] shadow-[0_0_10px_rgba(145,94,255,0.4)] relative z-10" 
+            />
+            
+            {/* Hover Card */}
+            <div className="absolute top-14 left-0 w-[280px] sm:w-[320px] p-4 rounded-xl bg-[#1d1836]/80 backdrop-blur-md border border-[#915eff]/30 shadow-xl opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 ease-out z-50 origin-top-left">
+              <h4 className="text-white font-bold text-[14px] sm:text-[15px] leading-snug mb-2">
+                🚀 Building AI Solutions for Real-World Problems
+              </h4>
+              <p className="text-secondary text-[12px] sm:text-[13px] font-medium italic leading-tight">
+                AI & Machine Learning Enthusiast | Data Analytics Explorer | Full Stack Developer
+              </p>
+            </div>
+          </div>
+          
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
             Bhavesh&nbsp;<span className="sm:block hidden">| AIML Engineer</span>
           </p>
