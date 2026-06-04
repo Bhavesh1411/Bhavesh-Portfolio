@@ -62,15 +62,17 @@ const getStatusBadgeStyle = (status: string) => {
 
 type TimelineCardProps = {
   item: (typeof FEATURED_ACHIEVEMENTS)[number];
+  position?: "left" | "right";
 };
 
 // Timeline Card
-const TimelineCard = ({ item }: TimelineCardProps) => {
+const TimelineCard = ({ item, position }: TimelineCardProps) => {
   const isHackathon = item.icon_type === "hackathon";
   const iconBg = isHackathon ? "#804dee" : "#2f80ed";
 
   return (
     <VerticalTimelineElement
+      position={position}
       contentStyle={{ background: "#1d1836", color: "#fff" }}
       contentArrowStyle={{ borderRight: "7px solid #232631" }}
       date={item.date}
