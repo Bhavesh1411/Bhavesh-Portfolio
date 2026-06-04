@@ -1,16 +1,12 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+import { VerticalTimeline, VerticalTimelineElement } from "./timeline";
 
 import { FEATURED_ACHIEVEMENTS } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { textVariant } from "../utils/motion";
 
-import "react-vertical-timeline-component/style.min.css";
 
 // SVG Icons
 const TrophyIcon = () => (

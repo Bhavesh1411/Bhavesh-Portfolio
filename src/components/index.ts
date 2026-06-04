@@ -14,6 +14,8 @@ import { Experience } from "./experience";
 import { Hero } from "./hero";
 import { Navbar } from "./navbar";
 import { Tech } from "./tech";
+import { Tilt } from "./tilt";
+import { VerticalTimeline, VerticalTimelineElement } from "./timeline";
 import { Works } from "./works";
 
 export {
@@ -28,5 +30,8 @@ export {
   Navbar,
   StarsCanvas,
   Tech,
+  Tilt,
+  VerticalTimeline,
+  VerticalTimelineElement,
   Works,
 };
