@@ -94,18 +94,18 @@ export const Contact = () => {
     // send email
     emailjs
       .send(
-        import.meta.env.VITE_APP_SERVICE_ID,
-        import.meta.env.VITE_APP_TEMPLATE_ID,
+        "service_7rrymlp", // VITE_APP_SERVICE_ID
+        "template_32milys", // VITE_APP_TEMPLATE_ID
         {
           from_name: form.name,
           to_name: "Bhavesh",
           from_email: form.email.trim().toLowerCase(),
-          email: import.meta.env.VITE_APP_EMAILJS_RECIEVER,
-          to_email: import.meta.env.VITE_APP_EMAILJS_RECIEVER,
+          email: "bhaveshchaudhary2506@gmail.com", // VITE_APP_EMAILJS_RECIEVER
+          to_email: "bhaveshchaudhary2506@gmail.com",
           reply_to: form.email.trim().toLowerCase(),
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_KEY,
+        "PMdJ4ILWj3JPYHLN8", // VITE_APP_EMAILJS_KEY
       )
       .then(() => toast.success("Thanks for contacting me."))
       .catch((error) => {
